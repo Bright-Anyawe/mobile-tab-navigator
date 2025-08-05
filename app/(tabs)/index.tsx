@@ -25,10 +25,18 @@ export default function HomeScreen() {
     <View style={styles.container}>
       <Text style={styles.title}>Welcome to Home</Text>
       <Text style={styles.subtitle}>User: {user.name}</Text>
-      <Button
+      <View style={styles.buttonContainer}> 
+        <Button
         title="Go to Profile"
         onPress={navigateToProfile}
+        style={styles.fBtn}
       />
+       <Button
+         title="Open Modal"
+              onPress={() => router.push('/modal')}
+           />
+
+      </View>
     </View>
   );
 }
@@ -50,4 +58,12 @@ const styles = StyleSheet.create({
     color: '#666',
     marginBottom: 20,
   },
+  buttonContainer: {
+    flexDirection: "column",
+    gap: 20,
+    width: '80%',
+  },
+  fBtn: {
+    marginBottom: 10,
+  }
 });
