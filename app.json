@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "mobile-tab-navigator",
+    "name": "Movie Tab Navigator",
     "slug": "mobile-tab-navigator",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -8,20 +8,33 @@
     "scheme": "mobiletabnavigator",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
+    "description": "A React Native movie app with tab navigation, search, and favorites using TMDB API",
+    "privacy": "public",
     "splash": {
       "image": "./assets/images/splash-icon.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.yourcompany.mobiletabnavigator",
+      "buildNumber": "1",
+      "infoPlist": {
+        "NSCameraUsageDescription": "This app does not use the camera.",
+        "NSMicrophoneUsageDescription": "This app does not use the microphone."
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "com.yourcompany.mobiletabnavigator",
+      "permissions": [
+        "INTERNET",
+        "ACCESS_NETWORK_STATE"
+      ]
     },
     "web": {
       "bundler": "metro",
@@ -33,6 +46,13 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "1e6c7255-40be-4e4f-aef9-84affa3c5b11"
+      }
+    },
+    "owner": "a03"
   }
 }

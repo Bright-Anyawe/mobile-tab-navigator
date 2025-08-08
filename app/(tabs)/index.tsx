@@ -29,7 +29,6 @@ export default function HomeScreen() {
         <Button
         title="Go to Profile"
         onPress={navigateToProfile}
-        style={styles.fBtn}
       />
        <Button
          title="Open Modal"
@@ -63,7 +62,5 @@ const styles = StyleSheet.create({
     gap: 20,
     width: '80%',
   },
-  fBtn: {
-    marginBottom: 10,
-  }
+
 });

@@ -1,0 +1,52 @@
+# Qodo Configuration for Mobile Tab Navigator
+# Expo React Native TypeScript Project
+
+project:
+  name: "mobile-tab-navigator"
+  type: "react-native-expo"
+  description: "Mobile application with tab navigation"
+
+language:
+  primary: "typescript"
+  framework: "react-native"
+
+include:
+  - "app/**/*.{ts,tsx,js,jsx}"
+  - "stores/**/*.{ts,tsx,js,jsx}"
+  - "constants/**/*.{ts,tsx,js,jsx}"
+  - "*.{ts,tsx,js,jsx,json,md}"
+
+exclude:
+  - "node_modules/**"
+  - ".expo/**"
+  - "dist/**"
+  - "web-build/**"
+  - ".git/**"
+
+quality:
+  typescript:
+    strict: true
+  react_native:
+    enforce_hooks_rules: true
+  mobile:
+    performance_checks: true
+    accessibility_checks: true
+
+testing:
+  framework: "jest"
+  test_patterns:
+    - "**/__tests__/**/*.{ts,tsx}"
+    - "**/*.{test,spec}.{ts,tsx}"
+
+mobile:
+  platforms: ["ios", "android", "web"]
+  expo:
+    sdk_version: "~53.0.20"
+    router: true
+
+review:
+  focus_areas:
+    - "performance"
+    - "accessibility"
+    - "security"
+    - "user_experience"
